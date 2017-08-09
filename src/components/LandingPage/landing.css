@@ -1,0 +1,51 @@
+body{
+    background-color: lightblue
+}
+
+.img-wrapper{
+    padding-top: 10px;
+    height: 400px;
+    text-align: center
+
+}
+.pokemon-logo{
+    height: 275px;
+}
+
+.continue-wrapper{
+    height: 200px;
+    text-align: center
+
+}
+
+.continue-btn{
+    text-align: center;
+	display: inline-block;
+	margin:5px;
+    font-weight: bold;
+    padding: 10px 10px 10px 10px ;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    -webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-o-border-radius: 7px;
+	border-radius: 7px;
+    box-shadow: 0 .2em gray; 
+    cursor: pointer;
+}
+
+@keyframes flickerAnimation { /* flame pulses */
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+.blink-text{
+     opacity:1;  
+    animation: flickerAnimation 3s infinite;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
