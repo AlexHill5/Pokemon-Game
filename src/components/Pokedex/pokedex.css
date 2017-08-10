@@ -8,8 +8,7 @@
     height: 100%;
     width: 30%;
     border-right: thick solid black;
-    overflow: auto
-
+    overflow: auto;
 }
 
 .info{
@@ -18,8 +17,36 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    
+    flex-direction: column
 }
+
+.info1{
+    height: 100%;
+    width: 70%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    background-image: url('./poke-background.png');
+    background-size: cover;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.ball2{
+    padding-top: 5px;
+    height: 150px;
+    animation: App-logo-spin infinite 2s linear;
+}
+
+.who-dat{
+    height: 250px;
+}
+
+
+
 
 .pokemon-header{
     font-size: 30px;
@@ -32,22 +59,36 @@
     font-size: 20px;
     text-align: center;
     border: .5px solid black;
-    padding: 5px;
 }
 
 .content-wrapper{
+    display: flex
+}
+.stats-wrapper{
+    height: 325px;
+    width: 300px;
+}
+.stats{
+    font-size: 20px;
+}
 
+.stat-li{
+    font-size: 20px;
+    word-spacing: 100px;
 }
 
 
-.pokemon-img{
-    height: 200px;
 
+.pokemon-img{
+    height: 275px;
+    padding-bottom: 100px;
 }
 
 .detailed-name{
     font-size: 30px;
     text-align: center;
+    padding-top: 30px;
+    border-bottom: thin solid black
 }
 
 .btn-pokemon{
@@ -57,7 +98,8 @@
     width: 175px;
     padding: 10px 10px 10px 10px ;
     background-color: lightgray;
-    text-shadow: -1px -1px , 1px 1px white;
+    color: gray;
+    text-shadow: -1px -1px black, 1px 1px white;
     -webkit-border-radius: 7px;
 	-moz-border-radius: 7px;
 	-o-border-radius: 7px;
@@ -65,3 +107,4 @@
     box-shadow: 0 .2em gray; 
     cursor: pointer;
 }
+
