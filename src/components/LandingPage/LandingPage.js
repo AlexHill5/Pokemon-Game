@@ -11,7 +11,7 @@ class LandingPage extends Component {
                 </div>
                 <div className='continue-wrapper'>
                     <h1 className='blink-text'> CLICK TO CONTINUE </h1>
-                   <Link to='./option'> <button className='continue-btn'>CONTINUE</button> </Link>
+                   <Link to='./options'> <button className='continue-btn'>CONTINUE</button> </Link>
                 </div>
             </div>
         );

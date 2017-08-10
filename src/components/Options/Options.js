@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import './options.css'
 
 class Options extends Component {
@@ -11,11 +12,11 @@ class Options extends Component {
             <div className='main-wrapper'>
                 <div>
                     <h1 className='header'> BATTLE </h1>
-                    <img className='nintendo' src={require('./nintendo-color.png')}/>
+                    <Link to='#'><img className='nintendo' src={require('./nintendo-color.png')}/></Link>
                 </div>
                <div> 
                    <h1 className='header'> POKEDEX </h1>
-                    <img className='pokedex' src={require('./pokedex.png')}/>
+                    <Link to='/pokedex'><img className='pokedex' src={require('./pokedex.png')}/></Link>
                 </div>
             </div>
             </div>
