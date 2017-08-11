@@ -37,7 +37,7 @@ function reducer(state = initialState , action){
         case ALL_POKEMON + '_FULFILLED':
             return Object.assign({}, state, {allPokemon: action.payload.data})
         case SELECTED_POKEMON +'_FULFILLED':
-            return  Object.assign({}, state.pokemonTeam, {pokemonTeam: [action.payload.data, ...state.pokemonTeam]})
+            return  Object.assign({}, state, {pokemonTeam: [action.payload.data, ...state.pokemonTeam]})
 
     }
     return state;

@@ -52,3 +52,24 @@
     outline: none
 }
 
+
+/*Registered team styling*/
+
+.register-content-wrapper{
+    display: flex;
+    height: 250px;
+    width: 450px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.register-chosen-pokemon{
+    height: 120px;
+    width: 120px;
+    border: thick solid black;
+    margin: 10px;
+}
+
+.registered-poke-name{
+    font-size: 20px;
+}

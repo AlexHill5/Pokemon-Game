@@ -6,6 +6,16 @@ import {bindActionCreators} from 'redux'
 
 
 class Instructions extends Component {
+    constructor(){
+        super();
+        this.state={
+            completeTeam: false
+        }
+
+
+
+
+    }
 
     componentDidMount(){
         this.props.getAllPokemon()
@@ -30,11 +40,20 @@ class Instructions extends Component {
         ////// end pokemon names left
 
         ///// Displaying the pokemon you selected to be on your team
-        var teamOfPokemon =  (this.props.team >= 1) ? this.props.team.map((item, index)=>{
-          return <div>
-                test :{item.name}
-            </div>
-        }) : <div> loading... </div>
+        var teamOfPokemon =  (this.props.team.length >= 1) ? this.props.team.slice(0,6).map((item, index)=>{
+            return (
+                    <div key={index} className='register-chosen-pokemon'>
+                       <h1 className='registered-poke-name'> {item.name.toUpperCase()} </h1>
+                       <img src={item.sprites.front_default}  />
+                    </div>
+            )
+        }) : null
+
+        if(this.props.team.length >= 6) {
+            this.setState({
+                completeTeam: true
+            })
+        }
 
         ///end displaying team
 
@@ -42,7 +61,7 @@ class Instructions extends Component {
 
     return (
             <div className='register-main-wrapper'>
-                <div className='register-pokemon'>
+                <div hidden={this.state.completeTeam} className='register-pokemon'>
                     <h1 className='register-pokemon-header'> Select a Pokémon </h1>
                     <ul>
                         {allPokemon}
@@ -52,9 +71,9 @@ class Instructions extends Component {
 
                 <div className='register-info'>
                         <div className='info'>
+                           <h1 className='register-team-header'> REGISTER YOUR TEAM </h1>
                         <div className='register-content-wrapper'>
-
-                           <ul> {teamOfPokemon} </ul>
+                          {teamOfPokemon} 
 
                         </div>
                     </div>
