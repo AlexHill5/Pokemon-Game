@@ -1,0 +1,54 @@
+.register-main-wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.register-pokemon {
+    height: 100%;
+    width: 30%;
+    border-right: thick solid black;
+    overflow: auto;
+}
+
+.register-info {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+/*Select Pokemon stylings*/
+
+.register-pokemon-header {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    border-bottom: thick solid black;
+}
+
+.register-poke-name {
+    font-size: 20px;
+    text-align: center;
+    border: .5px solid black;
+}
+.register-btn-pokemon {
+    text-align: center;
+    display: inline-block;
+    margin: 5px;
+    width: 175px;
+    padding: 10px 10px 10px 10px;
+    background-color: lightgray;
+    color: gray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    box-shadow: 0 .2em gray;
+    cursor: pointer;
+    outline: none
+}
+

@@ -1,110 +1,161 @@
-.main-wrapper{
+.main-wrapper {
     height: 100vh;
     width: 100%;
     display: flex;
 }
 
-.pokemon{
+.pokemon {
     height: 100%;
     width: 30%;
     border-right: thick solid black;
     overflow: auto;
 }
 
-.info{
+.info {
     height: 100%;
     width: 70%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column
 }
 
-.info1{
+.info1 {
     height: 100%;
     width: 70%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     background-image: url('./poke-background.png');
     background-size: cover;
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
-.ball2{
+
+.ball2 {
     padding-top: 5px;
     height: 150px;
     animation: App-logo-spin infinite 2s linear;
 }
 
-.who-dat{
+.who-dat {
     height: 250px;
 }
 
-
-
-
-.pokemon-header{
+.pokemon-header {
     font-size: 30px;
     text-align: center;
     padding: 20px;
     border-bottom: thick solid black;
 }
 
-.poke-name{
+.poke-name {
     font-size: 20px;
     text-align: center;
     border: .5px solid black;
 }
 
-.content-wrapper{
+.content-wrapper {
     display: flex
 }
-.stats-wrapper{
-    height: 325px;
+
+.content-wrapper2 {
+    display: flex;
+    padding-top: 33%
+}
+
+.stats-wrapper {
+    height: 250px;
     width: 300px;
 }
-.stats{
+
+.stats {
     font-size: 20px;
 }
 
-.stat-li{
+.stat-li {
     font-size: 20px;
     word-spacing: 100px;
 }
 
-
-
-.pokemon-img{
+.pokemon-img {
     height: 275px;
-    padding-bottom: 100px;
+    animation-name: jump;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
 }
 
-.detailed-name{
+.detailed-name {
     font-size: 30px;
     text-align: center;
     padding-top: 30px;
     border-bottom: thin solid black
 }
 
-.btn-pokemon{
+.btn-pokemon {
     text-align: center;
-	display: inline-block;
-	margin:5px;
+    display: inline-block;
+    margin: 5px;
     width: 175px;
-    padding: 10px 10px 10px 10px ;
+    padding: 10px 10px 10px 10px;
     background-color: lightgray;
     color: gray;
     text-shadow: -1px -1px black, 1px 1px white;
     -webkit-border-radius: 7px;
-	-moz-border-radius: 7px;
-	-o-border-radius: 7px;
-	border-radius: 7px;
-    box-shadow: 0 .2em gray; 
+    -moz-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    box-shadow: 0 .2em gray;
     cursor: pointer;
+    outline: none
 }
 
+
+
+
+
+/*
+@keyframes jump {
+  from, 20%, 53%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-4px,0);
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+.jump {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}*/

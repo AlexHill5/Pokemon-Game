@@ -12,7 +12,7 @@ class Options extends Component {
             <div className='main-wrapper'>
                 <div>
                     <h1 className='header'> BATTLE </h1>
-                    <Link to='#'><img className='nintendo' src={require('./nintendo-color.png')}/></Link>
+                    <Link to='/register'><img className='nintendo' src={require('./nintendo-color.png')}/></Link>
                 </div>
                <div> 
                    <h1 className='header'> POKEDEX </h1>

@@ -25,7 +25,8 @@ class Pokedex extends Component {
 
     handlePokemonData(i){
         this.setState({
-            loading: true
+            loading: true,
+            pokemon: null
         })
         axios.get(`http://pokeapi.co/api/v2/pokemon/${i}`)
         .then(res=>{
@@ -83,7 +84,7 @@ class Pokedex extends Component {
                 <div className='info1'>
                     {/*<img  className='who-dat' src={require('./whos-that-pokemon.png')}/>*/}
 
-                    <div className='content-wrapper'>
+                    <div className='content-wrapper2'>
                         <div className='stats-wrapper'>
                             <h1 className='detailed-name'> {this.state.pokemon.data.name.toUpperCase()}</h1>
                             <ul>
