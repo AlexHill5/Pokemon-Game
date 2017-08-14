@@ -29,6 +29,11 @@
     border-bottom: thick solid black;
 }
 
+.form-control{
+    margin-left: 17.5%;
+    text-align: center;
+}
+
 .register-poke-name {
     font-size: 20px;
     text-align: center;
@@ -57,7 +62,7 @@
 
 .register-content-wrapper{
     display: flex;
-    height: 250px;
+    height: 300px;
     width: 450px;
     flex-wrap: wrap;
     text-align: center;
@@ -70,6 +75,36 @@
     margin: 10px;
 }
 
+.info{
+    display: flex;
+    height: 350px;
+}
+
 .registered-poke-name{
     font-size: 20px;
+}
+
+
+.register-btn-battle{
+    text-align: center;
+    display: inline-block;
+    margin: 5px;
+    width: 175px;
+    height: 50px;
+    padding: 10px 10px 10px 10px;
+    background-color: lightgray;
+    color: gray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    box-shadow: 0 .2em gray;
+    cursor: pointer;
+    outline: none;
+}
+
+.register-btn-battle:disabled{
+  opacity: 0.65; 
+  cursor: not-allowed;
 }

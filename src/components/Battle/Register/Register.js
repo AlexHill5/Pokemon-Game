@@ -9,7 +9,8 @@ class Instructions extends Component {
     constructor(){
         super();
         this.state={
-            completeTeam: false
+            completeTeam: false,
+            userInput: ''
         }
 
 
@@ -23,8 +24,16 @@ class Instructions extends Component {
     }
 
 
+
+
     render(){
         console.log('team', this.props.team)
+
+        if(this.props.team.length >= 6) {
+            this.setState({
+                completeTeam: true,
+            })
+        }
 
 
 
@@ -32,7 +41,7 @@ class Instructions extends Component {
        var allPokemon = (this.props.pokemon.results) ? this.props.pokemon.results.map((pokemon, i)=> {
             return (
                 <div  key={i + 1}>
-                    <li className='register-poke-name' ><button className='register-btn-pokemon' onClick={()=> this.props.getSelectedPokemon(i + 1)}> {pokemon.name.toUpperCase()} </button> </li>
+                    <li className='register-poke-name' ><button disabled={this.state.completeTeam} className='register-btn-pokemon' onClick={()=> this.props.getSelectedPokemon(i + 1)}> {pokemon.name.toUpperCase()} </button> </li>
                 </div>
             )
         
@@ -49,19 +58,13 @@ class Instructions extends Component {
             )
         }) : null
 
-        if(this.props.team.length >= 6) {
-            this.setState({
-                completeTeam: true
-            })
-        }
-
         ///end displaying team
 
 
 
     return (
             <div className='register-main-wrapper'>
-                <div hidden={this.state.completeTeam} className='register-pokemon'>
+                <div className='register-pokemon'>
                     <h1 className='register-pokemon-header'> Select a Pokémon </h1>
                     <ul>
                         {allPokemon}
@@ -70,13 +73,13 @@ class Instructions extends Component {
                 </div>
 
                 <div className='register-info'>
-                        <div className='info'>
+                    <div className='info'>
                            <h1 className='register-team-header'> REGISTER YOUR TEAM </h1>
                         <div className='register-content-wrapper'>
                           {teamOfPokemon} 
-
                         </div>
                     </div>
+                        <button className='register-btn-battle' disabled={!this.state.completeTeam}> CONTINUE TO BATTLE </button> 
                 </div>
             </div>
     );
